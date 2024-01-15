@@ -1,0 +1,106 @@
+
+//+------------------------------------------------------------------+
+//|                                 Renko System                    |
+//|                   Developer: Forex Robot Easy Team               |
+//|                 Website: forexroboteasy.com                      |
+//+------------------------------------------------------------------+
+
+// Include necessary libraries
+#include <Trade/PositionInfo.mqh>
+#include <Trade/Trade.mqh>
+#include <Technical/Indicators/MA.mqh>
+#include <Notifications/Notification.mqh>
+
+// Define Renko System class
+class CRenkoSystem
+{
+private:
+   int m_renkoThreshold;    // Renko bar threshold
+   int m_maPeriod;          // Moving average period
+   bool m_showWicks;        // Flag to display wicks
+   bool m_showDatetime;     // Flag to display datetime indicator
+
+public:
+   // Constructor
+   CRenkoSystem(int renkoThreshold, int maPeriod, bool showWicks, bool showDatetime)
+   {
+      m_renkoThreshold = renkoThreshold;
+      m_maPeriod = maPeriod;
+      m_showWicks = showWicks;
+      m_showDatetime = showDatetime;
+   }
+
+   // Method to generate Renko bars
+   void GenerateRenkoBars()
+   {
+      // TODO: Implement Renko bars generation logic
+   }
+
+   // Method to calculate moving averages
+   void CalculateMovingAverages()
+   {
+      // TODO: Implement moving averages calculation logic
+   }
+
+   // Method to display wicks
+   void DisplayWicks()
+   {
+      // TODO: Implement wicks display logic
+   }
+
+   // Method to display datetime indicator
+   void DisplayDatetimeIndicator()
+   {
+      // TODO: Implement datetime indicator display logic
+   }
+
+   // Method to send custom notifications
+   void SendCustomNotifications()
+   {
+      // TODO: Implement custom notifications logic
+   }
+
+   // Method to raise event for Expert Advisor
+   void RaiseEventForEA()
+   {
+      // TODO: Implement event raising logic
+   }
+
+   // Main entry point of the Renko System
+   void Run()
+   {
+      GenerateRenkoBars();
+      CalculateMovingAverages();
+
+      if (m_showWicks)
+         DisplayWicks();
+
+      if (m_showDatetime)
+         DisplayDatetimeIndicator();
+
+      SendCustomNotifications();
+      RaiseEventForEA();
+   }
+};
+
+//+------------------------------------------------------------------+
+//|                      Expert Advisor Functions                     |
+//+------------------------------------------------------------------+
+//| This section contains the necessary trading functions             |
+//| for the Renko System.                                             |
+//+------------------------------------------------------------------+
+
+// TODO: Implement necessary trading functions
+
+//+------------------------------------------------------------------+
+//|                        Execution of Program                        |
+//+------------------------------------------------------------------+
+
+void OnStart()
+{
+   // Initialize Renko System
+   CRenkoSystem renkoSystem(10, 20, true, true);
+
+   // Run Renko System
+   renkoSystem.Run();
+}
